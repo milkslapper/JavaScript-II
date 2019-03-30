@@ -66,22 +66,36 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 
 function contains(item, list, cb) {
-  // contains checks if an item is present inside of the given array/list.
-  // Pass true to the callback if it is, otherwise pass false.
-  for (let i= 0; i < item.length; i++){
-
-if (item != list){
-
-
-return cb = true;
-
-}else {
-  return cb = false;
-      }
-    }
+  let current = false;
+ list.forEach(thing => {
+   if(item === thing){
+    current = true;
+   }
+ })
+ return cb(current);
 }
 
-console.log(contains(items,`${'Pencil'}`))
+contains ('Pencil', items, function(random){
+  console.log(random);
+})
+//   // contains checks if an item is present inside of the given array/list.
+//   // Pass true to the callback if it is, otherwise pass false.
+//   for (let i= 0; i < item.length; i++){
+
+// if (item != list){
+
+
+// return cb = true;
+
+// }else {
+//   return cb = false;
+//       }
+//     }
+// }
+
+//  console.log(contains(items,`${'apple'}`))
+
+
 
 
 
