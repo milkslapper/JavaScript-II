@@ -1,5 +1,15 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function waterMelon() {
+  let slicesIHave = 0 ;
+  return function slicesIWillGetToEat() {
+    slicesIHave = slicesIHave + 1;
+    return slicesIHave;
+  }
+}
+const slicesIWant = waterMelon();
+console.log(slicesIWant());
+console.log(slicesIWant());
 
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
